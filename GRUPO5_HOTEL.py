@@ -78,7 +78,7 @@ class bd():
 
         elif criterio==4:
             #Consulta hecha por Nombre ordenado por z-A
-            bd_gestor().cursor.execute("SELECT * FROM TDHotel ORDER BY Nombre DESC;")
+            self.cursor.execute("SELECT * FROM TDHotel ORDER BY Nombre DESC;")
 
         elif criterio==5:
             #Consulta hecha por Tarjeta de Crédito de 0-9
@@ -99,6 +99,10 @@ class bd():
         elif criterio==9:
             #Consulta hecha por Habitación solo la habitación familiar
             self.cursor.execute("SELECT * FROM TDHotel WHERE Habitación='Habitación Familiar';")
+
+        elif criterio==10:
+            #Consulta hecha por Habitación solo la habitación ejecutiva
+            self.cursor.execute("SELECT * FROM TDHotel WHERE Habitación='Habitación Ejecutiva';")
 
         elif criterio==11:
             #Muestra la tabla
@@ -572,3 +576,5 @@ class bd_gestor():
 
 #Llamando a la clase bd_gestor, luego un llamado a la ventana principal y por último la iniciación del ciclo para poder mostrar la interfaz gráfica creada
 bd_gestor().main.mainloop()
+
+#Cambio 1
